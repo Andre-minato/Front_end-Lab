@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="#">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./listarUser.css">
+    <title>Usuários</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+ <body class="tabela">
+    <header>
+        <a href="/home">
+            <span class="icon-voltar"><i class="bi bi-backspace"></i></i></span>
+        </a>
+    </header>
+    <div class="container">
+        <table class="table table-bordered table-hover caption-top">
+            <thead>
+                <tr class="table-secondary text-center">
+                    <th>id</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Tipo</th>
+                    <th>CPF</th>
+                    <th>Telefone</th>
+                    <th>status</th>
+                    <th>Opção</th>
+                    <!-- <th>Opção editar</th>
+                    <th>Opção excluir</th> -->
+                </tr>
+            </thead>
+            <tbody class="tabela text-center" data-lista>
+                
+            </tbody>
+            <caption id="titulo-tabela" class="text-center">Lista de usuários cadastrado</caption>
+        </table>
+    </div>
+    <script src="../static/js/mostrarUser.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="#">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./static/styles/login.css">
+    <title>Login</title>
+    
+</head>
+<body class="corpo">
+    <section class="container">
+        <h2>Bem-vindo(a)</h2>
+        <form  id="loginForm" class="form" onsubmit="login()">
+            
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Digite seu email" name="email" data-email>
+            </div>
+            <label for="password">Senha</label>
+            <div class="agrupar">
+                <input type="password" id="senha" placeholder="Digite sua senha" name="senha" data-senha>
+                <i class="bi bi-eye-fill" id="btn-senha" onclick="mostrarSenha()"></i>
+            </div>
+            <button id="send" type="submit" disabled="disabled">Entrar</button data-btn>
+        </form>
+        <div class="link">
+            <a href="/cadastro">Cadastre-se</a>
+        </div>
+    </section>
+    <script src="./static/js/login.js"></script>
+</body>
+</html>

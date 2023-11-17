@@ -1,0 +1,99 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  .corpo{
+    background-color: rgb(17, 86, 102);
+    height: 100vh;
+  }
+  /* Formulario box */
+  .container{
+    width: 420px;
+    background-color: #f0f0f6;
+    border-radius: 10px 10px 10px 10px;
+    padding: 16px 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    transform: translateY(10%);
+    flex-direction: column;
+  }
+  
+  .container h2{
+    color: rgb(44, 44, 44);
+    margin: 2em 0;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgb(17, 86, 102);
+  }
+  .form{
+    margin-bottom: 1rem;
+  }
+ 
+  .form label, input, select{
+    display: block;
+    width: 100%;
+  }
+  .container label {
+    color: rgb(44, 44, 44);
+    padding-top: 2px;
+    margin: 2px;
+   
+  }
+ 
+  .form input, select{
+    
+    padding: 15px;
+    outline: none;
+    border: 0;
+    margin: 6px;
+    font-size: 1rem;
+    border-radius: 8px;
+   
+  }
+  .form select {
+    background-color: #fff;
+  }
+  .form #send{
+    width: 100%;
+    border: none;
+    background-color: rgb(17, 86, 102);
+    color: #fff;
+    height: 50px;
+    padding: 15px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 16px;
+    font: bold;
+  }
+  .btn-txt {
+    color: #fff;
+    text-decoration: none;
+
+  }
+
+  
+  select {
+    color: #575758;
+  } 
+  
+
+  .link a:hover{
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  #send:disabled{
+    opacity: .4;
+    cursor: default;
+  }
+
+  
+  

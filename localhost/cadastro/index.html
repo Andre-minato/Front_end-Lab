@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="#">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/cadastro.css">
+    <title>Cadastro de curso</title>
+</head>
+<body class="corpo">
+    <section class="container">
+        <h2>Cadastro</h2>
+        <form class="form" onsubmit="cadastro()">
+            <label for="text">Nome</label>
+            <input type="text" placeholder="Digite seu nome" id="name" data-name>
+            <label for="text">Email</label>
+            <input type="text" placeholder="Digite seu email" id="email" data-email>
+            <label for="tipo_usuario">Selecionar</label>
+            <select name="tipo_usuario" id="user_type" data-user_type>
+                <option value="0" selected disabled id="um">Tipo de usuário</option>
+                <option value="professor">professor</option>
+                <option value="aluno">aluno</option>
+            </select>
+            <label for="text">Cpf / Cnpj</label>
+            <input type="text" placeholder="Digite seu cpf/cnpj" id="cpf_cnpj" data-cpf_cnpj>
+            <label for="text">Telefone</label>
+            <input type="text" placeholder="Digita seu telefone" id="phone" data-phone>
+            <label for="password">Crie uma senha</label>
+            <input type="password" placeholder="Digite a senha" id="password" data-password>
+            <button id="send" type="submit" disabled="disabled"><a class="btn-txt">Cadastrar</a></button>
+        </form>
+    </section>
+    <script src="../static/js/cadastro.js"></script>
+</body>
+</html>
