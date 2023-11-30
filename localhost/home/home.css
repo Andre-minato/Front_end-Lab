@@ -91,8 +91,49 @@ ul li.item-menu a .icon > i{
 .secundaria-texto {
     width: 390px;
 }
+.row {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 900px 0px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
 
+.card {
+    background-color: rgb(172, 203, 232);
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0 rgba(50,50,50,0.22);
+    padding: 20px;
+    margin: 20px;
+    width: 400px;
+    transition: all 0.3s ease-out;
+}
+.card:hover {
+    transform: translateY(-6px);
+    cursor: pointer;
+}
+.card-title {
+    color: #202020;
+}
 
+.card p {
+    color: #4d4e4f;
+    font-size: 16px;
+}
+.image {
+    float: right;
+    border-radius: 100%;
+    max-width: 44px;
+    max-height: 64px;
+}
+#btn {
+    font-size: 14px;
+    font-weight: bolder;
+    color: #fff;
+    background-color: var(--primary-color);
+}
 @media(min-width: 834px) {
 
     .cursos__container {

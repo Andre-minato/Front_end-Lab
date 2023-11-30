@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="#">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reserva.css">
+    <title>Reserva</title>
+</head>
+<body class="corpo" onload="conexaoApiLabPeloId()">
+    <section class="container">
+        <h2>Reserva de Lab</h2>
+        <form class="form">
+            <label for="text">Nome usuário:</label>
+            <input type="text" name="name" id="name" data-name>
+            <label for="text">Email:</label>
+            <input type="text" name="email" id="email" data-email>
+            <label for="text">Lab-Nome:</label>
+            <input type="text" name="lab_name" id="lab_name" data-lab-name>
+            <label for="password">Andar</label>
+            <input type="text" name="andar" id="andar" data-andar>
+            <div id="div">
+                <label for="comprovante">Comprovante:</label>
+                <span id="comprovante"></span><br>
+                <span id="comprovante2"></span><br>
+                <span id="comprovante3"></span>
+            </div>
+            <button id="send" type="submit" onclick="reservaPost()"><a class="btn-txt">Reservar</a></button>
+        </form>
+    </section>
+    <script src="./reserva.js"></script>
+</body>
+</html>

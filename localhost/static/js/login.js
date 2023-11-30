@@ -20,11 +20,14 @@ async function fazPost(body){
         return
     } else {
         const conexaoConvertida = await conexao.json();
-        console.log(conexaoConvertida)
-        console.log(conexaoConvertida.data.token)
-        //alert(conexaoConvertida.mensagem)
-        console.log(conexaoConvertida.mensagem)
+        alert(conexaoConvertida.mensagem)
         window.localStorage.setItem("token", JSON.stringify(conexaoConvertida.data.token))
+        window.localStorage.setItem("id", conexaoConvertida.id)
+        window.localStorage.setItem("role", conexaoConvertida.role)
+        window.localStorage.setItem("name", conexaoConvertida.name)
+        window.localStorage.setItem("email", conexaoConvertida.email)
+        window.localStorage.setItem("user_type_id", conexaoConvertida.user_type_id)
+
         window.location.href = 'http://localhost:8000/home/'
         console.log(localStorage.getItem())
         return conexaoConvertida;

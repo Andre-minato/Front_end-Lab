@@ -2,6 +2,34 @@
     --primary-color: rgb(17, 86, 102);
     --primary-color-darker: rgb(9, 48, 56);
 }
+
+header nav {
+    height: 80px;
+	margin: 0px;
+	padding-right: 1rem;
+	display: flex;
+    justify-content: space-between;
+	
+}
+
+header nav a {
+    font-size: 25px;
+    color: #fff;	
+    padding: 20px;
+	margin: 1px;
+}
+header nav a span p {
+   
+    font-size: 15px;
+}
+
+#lab  {
+    padding-left: 1910%;
+}
+#lab p {
+    padding-left: 1880%;
+}
+
 body{
     display: flex;
     height: 100vh;
@@ -9,10 +37,11 @@ body{
     background-color: rgb(17, 86, 102) !important;
 }
 .container {
-    transform: translateY(8%);
+    transform: translateY(14%);
+    
 }
 body.tabela{
-    left: 0;
+    right: 0%;
 }
 .table-secondary{
     top: 30px !important;
@@ -23,12 +52,12 @@ body.tabela{
     font-weight: bold !important;
 }
 
-header a {
+/* header a {
     font-size: 25px;
     color: #fff;	
     padding: 20px;
 	margin: 1px;
-}
+} */
 
 .icon-voltar{
     font-size: 25px;

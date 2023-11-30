@@ -20,8 +20,11 @@ const textoInativo = document.getElementById('btn')
 const listaLab = document.querySelector("[data-lista]")
 
 function constroiTabela(id, floor, lab_name, description, is_disabled, btn) {
+    const botao = document.getElementById("btn")
     if (is_disabled != null){
         is_disabled = "inativo"
+        btn = "Ativar"
+        
 
     } else {
         is_disabled = "ativado" 
@@ -38,6 +41,7 @@ function constroiTabela(id, floor, lab_name, description, is_disabled, btn) {
     <td id="status">${is_disabled}</td>
     <td><button class="ativar" id="btn">${btn}</button></td>
     `
+    
     return tabelaLab;
 }
 
@@ -52,22 +56,44 @@ async function users() {
 }
 users();
 
-async function conexaoApi_ativar(evento, id) {
-    evento.preventDefault()
-    //"http://localhost:3000/users/activate/4"
-    const conexao = await fetch(`"http://localhost:3000/lab/activate/${id}"`, {
+async function conexaoApi_ativar(id) {
+    const lab_id = id
+    const myHeadrs = new Headers();
+    myHeadrs.append("Content-Type", "application/json"); 
+    myHeadrs.append("authorization", "Bearer " + newToken)
+    
+    const requestOptions = {
         method: 'PUT',
-        headers: {
-            authorization: "Bearer " + newToken
-        }
-    })
-    const response = await conexao.json();
-    console.log(response)
-    return response
+        headers: myHeadrs,
+        redirect: 'follow'
+    }
+    try {
+        const conexao = await fetch(`http://localhost:3000/lab/activate/${lab_id}`, requestOptions)
+        const conexaoConvertida = await conexao.json();
+        return alert(conexaoConvertida.mensagem)
+    } catch {
+        return alert("Indisponível, tente mais tarde!")
+    }
 }
 
-$(document).ready(function() {
-    $('#btn').click(function() {
-        
-    })
-})
+
+
+async function desativarLab(id){
+    const lab_id = id
+    const myHeadrs = new Headers();
+        myHeadrs.append("Content-Type", "application/json"); 
+        myHeadrs.append("authorization", "Bearer " + newToken)
+    
+    const requestOptions = {
+        method: 'DELETE',
+        headers: myHeadrs,
+        redirect: 'follow'
+    }
+    try {
+        const conexao = await fetch(`http://localhost:3000/lab/disable/${lab_id}`, requestOptions)
+        const conexaoConvertida = await conexao.json();
+        return alert(conexaoConvertida.mensagem)
+    } catch {
+        return alert("Indisponível, tente mais tarde!")
+    }
+}
